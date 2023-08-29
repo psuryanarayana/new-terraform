@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
-  ami           = "ami-00d48a21603b2119b"
-  instance_type = "t3.micro"
-  security_group_ids = "sg-09f666e4e00dff33e"
+  ami           = var.ami
+  instance_type = var.instance_type
+  security_group_ids = var.security_group_ids
 
   tags = {
     Name = "HelloWorld"
